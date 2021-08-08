@@ -21,23 +21,14 @@ We are a Telecom operator. In our database, we are starting to store phone numbe
 The phone numbers as a static data structure that is initialised when program runs.<b> DAO layer has not been implemented due to this assumption. However Springboot's H2 database can also be used to mock the database implementation.<b/><br/>
 
 <b>Interface Specifications:</b><br/>
-public interface TelephoneDirectory {
+![image](https://user-images.githubusercontent.com/88463824/128631490-46613abb-e46d-4c9d-b7b7-96335e9ef713.png)
+   
+<b>Data Structure</b>	<br/>
+![image](https://user-images.githubusercontent.com/88463824/128631635-5137b6c9-33e4-4c10-bd0a-64599f4d73b3.png)
+![image](https://user-images.githubusercontent.com/88463824/128631619-02b6bd55-5c5f-43ae-92f9-260804b12d71.png)
 
-    /*
-     * The method returns list of all phone numbers
-     */
-    public List<String> getAllPhoneNumbers();
+<b>Static Data:</b><br/>
+![image](https://user-images.githubusercontent.com/88463824/128631528-3179c0de-b5f7-4aeb-ad0f-8afa3edf9583.png)
 
-    /*
-     * The method returns list of all phone numbers for a given customer
-     */
-    public List<String> getAllPhoneNumbers(int customerId);
-
-    /*
-     * The method activates phonenumber for a given customer
-     */
-    public void activatePhoneNumber(int customerId, String phoneNumber);
-
-}
 
 </html>
