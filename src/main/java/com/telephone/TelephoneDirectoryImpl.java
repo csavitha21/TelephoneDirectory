@@ -37,7 +37,7 @@ public class TelephoneDirectoryImpl implements TelephoneDirectory {
         logger.debug("CustomerID " + customerId);
         logger.debug("Phone number " + phoneNumber);
 
-        //Print updated customer's phone numbers list
+        //Print customer's phone number status before activation
         customers.stream().filter(a -> a.getCustomerId() == customerId).
                 forEach(a -> a.getPhoneNumbers().stream().filter(x -> x.getPhoneNumber().equals(phoneNumber)).
                         forEach(x -> logger.debug("PhoneNumber status before activation: " + x.isActive())));
@@ -48,7 +48,7 @@ public class TelephoneDirectoryImpl implements TelephoneDirectory {
                         filter(x -> x.getPhoneNumber().equals(phoneNumber)).
                         forEach(x -> x.setActive(true)));
 
-        //Print updated customer's phone numbers list
+        //Print customer's phone number status after activation
         customers.stream().filter(a -> a.getCustomerId() == customerId).
                 forEach(a -> a.getPhoneNumbers().stream().filter(x -> x.getPhoneNumber().equals(phoneNumber)).
                         forEach(x -> logger.debug("PhoneNumber status after activation: " + x.isActive())));
